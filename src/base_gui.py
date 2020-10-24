@@ -1,10 +1,13 @@
 from tkinter import *
+import tkinter as tk
 
-class BaseGUI:
-    def __init__(self, master, title=""):
+class BaseGUI(tk.Frame):
+    def __init__(self, master, controller, title="", bg=""):
+        super(BaseGUI, self).__init__(master, bg=bg)
+        self.controller = controller
         self.master = master
         master.title(title)# title of the window
-        master.geometry("1024x576")
+        self.grid(row=0, column=0, sticky="nsew")
 
 
 if __name__ == "__main__":
