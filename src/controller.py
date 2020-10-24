@@ -5,9 +5,10 @@ from src.bubble_end import ChatScreen3
 from src.Tkinter_image import TkinterImage
 from src.helloworld_gui import HelloWorld, SecondFrame
 from src.login2 import PasswordGUI2
+from src.Phishing import Phishing
 
-classes = {"login":PasswordGUI, "chat":ChatScreen, "image":TkinterImage, "hello": HelloWorld, "second":SecondFrame,
-           "login2":PasswordGUI2, "chat2":ChatScreen2, "chat3":ChatScreen3}
+classes = {"login":PasswordGUI, "chat":ChatScreen, "image": TkinterImage, "hello": HelloWorld, "second":SecondFrame,
+           "login2":PasswordGUI2, "chat2":ChatScreen2, "chat3": ChatScreen3, "Phishing": Phishing}
 
 class Controller:
     def __init__(self, window, start_frame):
