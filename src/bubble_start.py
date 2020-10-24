@@ -1,7 +1,7 @@
 from tkinter import *
 from datetime import datetime
 import textwrap
-from src.base_gui import BaseGUI
+
 
 root = Tk()
 root.config(bg="white")
@@ -14,7 +14,7 @@ messages = ["Hello and welcome to our internet safety game! Click CONTINUE to pr
             "I am here to explain how things will work.",
             "Firstly we ask you to login by typing a password to enter with the username shown. Click NEXT SCREEN to advance screens."]
 
-class BotBubbyyle(BaseGUI):
+class BotBubble():
     def __init__(self,master,message=""):
         self.master = master
         self.frame = Frame(master,bg="salmon")
