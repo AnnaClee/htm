@@ -3,17 +3,6 @@ from datetime import datetime
 import textwrap
 
 
-root = Tk()
-root.config(bg="white")
-
-canvas = Canvas(root, width=1024, height=576,bg="white")
-canvas.grid(row=0,column=0,columnspan=3)
-
-bubbles = []
-messages = ["Hello and welcome to our internet safety game! Click CONTINUE to proceed.",
-            "I am here to explain how things will work.",
-            "Firstly we ask you to login by typing a password to enter with the username shown. Click NEXT SCREEN to advance screens."]
-
 class BotBubble():
     def __init__(self,master,message=""):
         self.master = master
@@ -47,8 +36,20 @@ def clear_canvas():
     canvas.delete("all")
 
 
-a = BotBubble(canvas, message=messages[0])
-bubbles.append(a)
-Button(root,text="CONTINUE",command=instructions).grid(row=1, column=1)
-Button(root,text="NEXT SCREEN",command=clear_canvas).grid(row=1, column=2)
-root.mainloop()
+
+if __name__ == "__main__":
+    root = Tk()
+    root.config(bg="white")
+
+    canvas = Canvas(root, width=1024, height=576, bg="white")
+    canvas.grid(row=0, column=0, columnspan=3)
+
+    bubbles = []
+    messages = ["Hello and welcome to our internet safety game! Click CONTINUE to proceed.",
+                "I am here to explain how things will work.",
+                "Firstly we ask you to login by typing a password to enter with the username shown. Click NEXT SCREEN to advance screens."]
+    a = BotBubble(canvas, message=messages[0])
+    bubbles.append(a)
+    Button(root,text="CONTINUE",command=instructions).grid(row=1, column=1)
+    Button(root,text="NEXT SCREEN",command=clear_canvas).grid(row=1, column=2)
+    root.mainloop()
