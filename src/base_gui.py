@@ -2,11 +2,8 @@ from tkinter import *
 import tkinter as tk
 
 class BaseGUI(tk.Frame):
-    def __init__(self, master, controller, title="", bg=None):
-        if bg is None:
-            super(BaseGUI, self).__init__(master)
-        else:
-            super(BaseGUI, self).__init__(master, bg=bg)
+    def __init__(self, master, controller, title="", bg=""):
+        super(BaseGUI, self).__init__(master, bg=bg)
         self.controller = controller
         self.master = master
         master.title(title)# title of the window
