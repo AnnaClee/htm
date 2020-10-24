@@ -1,7 +1,6 @@
 from src.base_gui import BaseGUI
 from tkinter import *
 
-from src.controller import Controller
 
 
 class SecondFrame(BaseGUI):
@@ -29,13 +28,14 @@ class HelloWorld(BaseGUI):
 
     def on_button_click(self):
         # This switches to SecondFrame
-        self.controller.switch_frame(SecondFrame)
+        self.controller.switch_frame("second")
 
     def update_label(self, new_text):
         self.label['text'] = new_text
 
 
 if __name__ == "__main__":
+    from src.controller import Controller
     # Any testing specific to this class should be done here
     window = Tk()
     app = Controller(window, HelloWorld)

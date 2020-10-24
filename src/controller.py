@@ -1,3 +1,10 @@
+from src.login import PasswordGUI
+from src.bubble_start import ChatScreen
+from src.Tkinter_image import TkinterImage
+from src.helloworld_gui import HelloWorld, SecondFrame
+
+classes = {"login":PasswordGUI, "chat":ChatScreen, "image":TkinterImage, "hello": HelloWorld, "second":SecondFrame}
+
 class Controller:
     def __init__(self, window, start_frame):
         self.window = window
@@ -10,7 +17,7 @@ class Controller:
 
     def switch_frame(self, frame_class):
         print("I is called")
-        new_frame = frame_class(self.window, self)
+        new_frame = classes[frame_class](self.window, self)
 
         if self.current_frame is not None:
             self.current_frame.destroy()
