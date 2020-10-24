@@ -28,7 +28,7 @@ class TkinterImage(BaseGUI):
 
     def on_button_click(self):
         # This switches to SecondFrame
-        self.controller.switch_frame("login")
+        self.controller.switch_frame("login2")
 
 
 if __name__ == "__main__":

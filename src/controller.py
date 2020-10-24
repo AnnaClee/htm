@@ -2,8 +2,10 @@ from src.login import PasswordGUI
 from src.bubble_start import ChatScreen
 from src.Tkinter_image import TkinterImage
 from src.helloworld_gui import HelloWorld, SecondFrame
+from src.login2 import PasswordGUI2
 
-classes = {"login":PasswordGUI, "chat":ChatScreen, "image":TkinterImage, "hello": HelloWorld, "second":SecondFrame}
+classes = {"login":PasswordGUI, "chat":ChatScreen, "image":TkinterImage, "hello": HelloWorld, "second":SecondFrame,
+           "login2":PasswordGUI2}
 
 class Controller:
     def __init__(self, window, start_frame):
