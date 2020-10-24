@@ -6,20 +6,20 @@ from src.base_gui import BaseGUI
 
 class PasswordGUI(BaseGUI):
     def __init__(self, master, controller):
-        super(PasswordGUI, self).__init__(master,controller, "User Login")
+        super(PasswordGUI, self).__init__(master, controller, "User Login")
 
-        self.label = Label(master, text="Username").grid(row=0, column=1)
+        self.label = Label(self, text="Username").grid(row=0, column=1)
         username = StringVar()
-        self.username_entry = Entry(master, textvariable=username).grid(row=0, column=2)
+        self.username_entry = Entry(self, textvariable=username).grid(row=0, column=2)
 
-        self.passwordLabel = Label(master, text="Password").grid(row=1, column=1)
+        self.passwordLabel = Label(self, text="Password").grid(row=1, column=1)
         entered_password = StringVar()
-        self.passwordEntry = Entry(master, textvariable=entered_password, show='*').grid(row=1,column=2)
+        self.passwordEntry = Entry(self, textvariable=entered_password, show='*').grid(row=1, column=2)
         validateLogin = partial(self.validate_login, username, entered_password)
 
-        self.login_button = Button(master, text="login", command=validateLogin).grid(row=4, column=1)
+        self.login_button = Button(self, text="login", command=validateLogin).grid(row=4, column=1)
 
-        self.close_button = Button(master, text="Close", command=master.quit)
+        self.close_button = Button(self, text="Close", command=self.quit)
 
 
     def validate_login(self, username, entered_password):
