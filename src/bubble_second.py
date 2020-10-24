@@ -6,9 +6,9 @@ from src.base_gui import BaseGUI
 from src.bubble_start import BotBubble
 
 
-class ChatScreen(BaseGUI):
+class ChatScreen2(BaseGUI):
     def __init__(self, master, controller):
-        super(ChatScreen,self).__init__(master,controller)
+        super(ChatScreen2,self).__init__(master,controller)
         self.canvas = Canvas(self, width=500, height=500, bg="white")
         self.canvas.grid(row=0)
         self.bubbles = []
@@ -26,4 +26,4 @@ class ChatScreen(BaseGUI):
             self.bubbles.append(a)
 
     def next_screen(self):
-        self.controller.switch_frame("Tkinter_image")
+        self.controller.switch_frame("image")

@@ -25,8 +25,7 @@ class PasswordGUI(BaseGUI):
     def validate_login(self, username, entered_password):
         password = "password"
         if entered_password.get() == password:
-            print("you did it!")
-            self.controller.switch_frame('image')
+            self.controller.switch_frame('chat2')
         else:
             print("incorrect password")
 

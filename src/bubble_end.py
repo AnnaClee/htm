@@ -6,9 +6,9 @@ from src.base_gui import BaseGUI
 from src.bubble_start import BotBubble
 
 
-class ChatScreen(BaseGUI):
+class ChatScreen3(BaseGUI):
     def __init__(self, master, controller):
-        super(ChatScreen,self).__init__(master,controller)
+        super(ChatScreen3,self).__init__(master,controller)
         self.canvas = Canvas(self, width=500, height=500, bg="white")
         self.canvas.grid(row=0)
         self.bubbles = []

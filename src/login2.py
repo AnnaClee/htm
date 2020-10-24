@@ -25,7 +25,7 @@ class PasswordGUI2(BaseGUI):
     def validate_login(self, username, entered_password):
         password = "remember"
         if entered_password.get() == password:
-            self.controller.switch_frame('image')
+            self.controller.switch_frame('chat3')
         else:
             self.controller.switch_frame('Phishing')
 

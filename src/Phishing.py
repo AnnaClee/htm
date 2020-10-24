@@ -24,7 +24,7 @@ class Phishing(BaseGUI):
 
     def on_button_click(self):
         # This switches to SecondFrame
-        self.controller.switch_frame("bubble_end")
+        self.controller.switch_frame('chat3')
 
 
 if __name__ == "__main__":
