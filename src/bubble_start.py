@@ -1,6 +1,7 @@
 from tkinter import *
 from datetime import datetime
 import textwrap
+from src.login import PasswordGUI
 
 from src.base_gui import BaseGUI
 from src.controller import Controller
@@ -91,7 +92,7 @@ class ChatScreen(BaseGUI):
             self.bubbles.append(a)
 
     def next_screen(self):
-        self.controller.switch_frame(HelloWorld)
+        self.controller.switch_frame(PasswordGUI)
 
 
 
