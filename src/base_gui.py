@@ -1,6 +1,5 @@
 from tkinter import *
 
-
 class BaseGUI:
     def __init__(self, master, title=""):
         self.master = master
