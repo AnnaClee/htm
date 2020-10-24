@@ -36,7 +36,6 @@ def clear_canvas():
     canvas.delete("all")
 
 
-
 if __name__ == "__main__":
     root = Tk()
     root.config(bg="white")
