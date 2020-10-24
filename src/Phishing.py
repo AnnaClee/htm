@@ -16,11 +16,11 @@ class Phishing(BaseGUI):
         # This adds another button below saying Facebook, just if they didn't click on the image
         # This still needs a command
         self.aButton = Button(self, text='A', font=(
-            'Verdana', 15), command=self.on_button_click).place(x=5, y=550)
+            'Verdana', 15), command=self.on_button_click).pack(side=TOP)
         self.bButton = Button(self, text='B', font=(
-            'Verdana', 15), command=self.on_button_click).place(x=40, y=550)
+            'Verdana', 15), command=self.on_button_click).pack(side=TOP)
         self.cbButton = Button(self, text='C', font=(
-            'Verdana', 15), command=self.on_button_click).place(x=75, y=550)
+            'Verdana', 15), command=self.on_button_click).pack(side=TOP)
 
     def on_button_click(self):
         # This switches to SecondFrame
