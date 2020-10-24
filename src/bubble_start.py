@@ -95,7 +95,6 @@ class ChatScreen(BaseGUI):
         self.controller.switch_frame(PasswordGUI)
 
 
-
 if __name__ == "__main__":
     window = Tk()
     c = Controller(window,ChatScreen)
