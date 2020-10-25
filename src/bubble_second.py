@@ -19,7 +19,8 @@ class ChatScreen2(BaseGUI):
     def instructions(self):
         messages = ["We're in! Now we move on to the next phase of our hacking operation!",
                     "Wouldn't it be funny if we could access this person's facebook account to make a silly post.",
-                    "On the next screen you will see the desktop: Click to open facebook and then attempt to login using the same credentials as before."]
+                    "On the next screen you will see the desktop: Click to open facebook and then attempt to login using the same credentials as before.",
+                    "If we can't get in we will have to try and trick the person into giving us our data! With a phishing attack to their emails."]
         for i, msg in enumerate(messages):
             self.canvas.move(ALL, 0, -110)
             a = BotBubble(self.master,self.controller, self.canvas, msg)
